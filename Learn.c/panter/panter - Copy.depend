@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1669218105 source:c:\users\fg\desktop\panter\main.c
+	<stdio.h>
+
+1669225550 source:c:\users\fg\desktop\panter\new.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -3,6 +3,10 @@
 
 class Complex
 {
+    private:
+    float real;
+    float imaginary;
+    
 public:
     Complex(float mreal = 0, float mimaginary = 0) : real(mreal), imaginary(mimaginary)
     {
@@ -38,10 +42,6 @@ public:
     {
         return this->imaginary;
     }
-
-private:
-    float real;
-    float imaginary;
 };
 
 std::ostream &operator<<(std::ostream &output, Complex const &complex)

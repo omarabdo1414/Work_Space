@@ -30,7 +30,7 @@ public:
         std::cout << "Elips" << std::endl;
     }
 
-    virtual void displayCircleShape()
+    void displayCircleShape()
     {
         show();
     }
@@ -43,4 +43,5 @@ int main()
     shape = &circle;
 
     shape->show();
+    circle.show();
 }

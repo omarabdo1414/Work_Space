@@ -18,10 +18,11 @@ namespace Evaluation
             Evaluation = "Excellent";
         else
             Evaluation = "Failed";
-        
+        +
         return Evaluation;
     }
 }
+
 int main()
 {
     std::uint16_t grade;

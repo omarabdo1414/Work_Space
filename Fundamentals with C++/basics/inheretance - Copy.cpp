@@ -25,6 +25,7 @@ class Value
             }    
         }
 
+        // Destructor
         ~Value ()
         {
             delete [] p;
@@ -34,6 +35,7 @@ class Value
         int *p;
         int memoryCapcity;
 };
+
 
 void useValue(int setValue)
 {

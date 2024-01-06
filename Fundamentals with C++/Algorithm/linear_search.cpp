@@ -7,7 +7,7 @@ void linear(std::array <int, 6> list, int key)
     {
         if (key == list[i])
         {
-            std::cout << "The key value founded at " << i << " index" << std::endl;
+            std::cout << "The key value " << list[i] << " founded at " << i << " index" << std::endl;
             break;
         }
     }

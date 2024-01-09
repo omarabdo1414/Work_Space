@@ -1,14 +1,10 @@
 #include <iostream>
 
-int * guess()
-{
-    int x = 7;
-    return &x;
-}
 
 int main()
 {
-    int *x = guess();
+    int num1 = 5, num2 = 6;
+    int sum = num1 + num2;
 
-    return 0;
+    std::cout << "Hello World " << sum << std::endl;
 }

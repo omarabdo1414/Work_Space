@@ -48,7 +48,7 @@ public:
     }
 };
 
-class Student : public Person {
+class Student {
 private:
     int studyLevel;
     int studentId;
@@ -96,7 +96,7 @@ public:
 
     // Additional method specific to Student class
     void displayStudentInfo() const {
-        displayPersonInfo();
+        Person::displayPersonInfo();
         std::cout << "Study Level: " << getStudyLevel() << "\n";
         std::cout << "Student ID: " << getStudentId() << "\n";
         std::cout << "GPA: " << getGPA() << "\n";

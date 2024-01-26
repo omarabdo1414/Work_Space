@@ -1,18 +1,49 @@
 #include <iostream>
-#include <forward_list>
+#include <list>
 
 int main()
 {
-    std::forward_list<int> firstList(10), secondList;
+    std::list <int> myList;
 
-    firstList.assign({1,2,3,4,5,6,7,8,9,10});
-    secondList.assign(11,20);
-    secondList.assign(firstList.begin(), firstList.end());
+    myList.push_back(1);
+    myList.push_back(2);
+    myList.push_back(3);
 
-    for (auto element : secondList)
+    for(auto it = myList.begin(); it != myList.end(); it++)
     {
-        std::cout << element << std::endl;
+        std::cout << *it << " " << std::endl;
     }
+
+    std::cout << std::endl;
+
+    myList.push_front(0);
+
+    auto it1 = myList.begin();
+    ++it1;
+    std::cout << *it1 << std::endl;
+    ++it1;
+    ++it1;
+    std::cout << *it1 << std::endl;
+    myList.insert(it1, 4);
+
+
+    for(auto it = myList.begin(); it != myList.end(); it++)
+    {
+        std::cout << *it << " " << std::endl;
+    }
+
+    std::list<int> l = {1, 2, 3};
+    std::list<int> li = {4, 5, 6};
+
+    l.merge(li);
+
+    for(auto it = l.begin(); it != l.end(); it++)
+    {
+        std::cout << *it << " " << std::endl;
+    }
+
+    l.clear();
+
 
     return 0;
 }

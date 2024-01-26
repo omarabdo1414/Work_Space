@@ -49,5 +49,4 @@ int main()
 
     car1.vehiclSpeed();
     car2.vehiclSpeed();
-
 }

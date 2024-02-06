@@ -18,7 +18,7 @@ public:
  
 int main()
 {
-    SmartPtr<int> ptr(new int('A'));
+    SmartPtr<int> ptr(new int(10));
     // *ptr = 20;
     cout << *ptr;
  

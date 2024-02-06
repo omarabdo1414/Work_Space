@@ -108,7 +108,8 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xtree": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "queue": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "cmake.sourceDirectory": "C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/Cmake"

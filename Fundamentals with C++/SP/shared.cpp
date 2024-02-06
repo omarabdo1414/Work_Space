@@ -12,13 +12,13 @@ using namespace std;
  
 class Rectangle {
     int length;
-    int breadth;
+    int width;
  
 public:
-    Rectangle(int l, int b)
+    Rectangle(int l, int w)
     {
         length = l;
-        breadth = b;
+        width = w;
     }
  
     int area() { return length * breadth; }

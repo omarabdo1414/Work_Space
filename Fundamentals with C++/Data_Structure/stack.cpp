@@ -32,6 +32,7 @@ public:
     {
         return top < 0;
     }
+    
     void pop()
     {
         if (!is_empty())

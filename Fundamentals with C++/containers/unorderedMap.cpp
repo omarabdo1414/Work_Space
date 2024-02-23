@@ -9,10 +9,16 @@ int main()
     cout << um["Kia"] << endl;
 
     um["Kia"] = 2020;
-    um.insert("Kia", 2022); // not effective
-    um.insert_or_assign("Kia", 2022);
+    // um.insert("Kia", 2022); // not effective
+    um.insert_or_assign("Kia", 2022); // added in C++17
 
     cout << um["Kia"] << endl;
+
+    /*
+    empty
+    size
+    max
+    */
 
     return 0;
 }

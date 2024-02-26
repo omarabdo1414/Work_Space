@@ -6,7 +6,7 @@ class SmartPtr {
 private:
     T* ptr; // Actual pointer
 public:
-    // Constructor: 
+    // Constructor
     explicit SmartPtr(T* p = NULL) { ptr = p; }
  
     // Destructor

@@ -7,7 +7,7 @@ private:
     int length;
     int breadth;
 };
- 
+
 void fun()
 {
     Rectangle* p = new Rectangle();

@@ -15,24 +15,25 @@ class ATM
     void passWord()
     {
         std::cout << "Enter Password : ";
-        std::cin >> passWord;
-        
+        std::cin >> password;
     }
 
     private:
         int password;
-}
+};
 
 int main()
 {
+    ATM atm;
     // check balace, deposit, withdraw, show menu
     int option;
     double balance = 500;
     do 
     {
     
-        showmenu();
-        std::cout << "\t\tChoose Option : ";
+        atm.showmenu();
+        // atm.passWord();
+        std::cout << "\tChoose Option : ";
         std::cin >> option;
         system("cls");
 

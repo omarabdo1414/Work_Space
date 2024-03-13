@@ -11,7 +11,7 @@ class Employee{
         }
         // Methods
         // set and Getters
-        void setFrstName(std::string f_name)
+        void setFirstName(std::string f_name)
         {
             fName = f_name;
         }

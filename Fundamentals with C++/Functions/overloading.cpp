@@ -1,30 +1,5 @@
 #include <iostream>
 
-/*
-Function : 
-    Example:
-        1- void func()
-        {
-            statements;
-        }
-
-        2- void func(int x)
-        {
-            statements;
-        }
-
-        3- int func()
-        {
-            statements;
-        }
-
-        4- int func(int x, int y){
-            statements;
-        }
-
-*/
-
-//Function Prototype
 int sum(int x, int y)
 {
     return x + y;

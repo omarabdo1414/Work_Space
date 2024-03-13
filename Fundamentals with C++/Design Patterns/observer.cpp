@@ -12,6 +12,9 @@ public:
 
 class Subject
 {
+private:
+    std::vector<Observer *> observer;
+
 public:
     virtual ~Subject() = default;
 
@@ -32,9 +35,6 @@ public:
             o->Update(*this);
         }
     }
-
-private:
-    std::vector<Observer *> observer;
 };
 
 class ClockTimer : public Subject
@@ -98,7 +98,7 @@ private:
 class AnalogClock : public Observer
 {
 public:
-    AnalogClock(ClockTimer &s) : subject(s)
+    explicit AnalogClock(ClockTimer &s) : subject(s)
     {
         subject.Attach(*this);
     }

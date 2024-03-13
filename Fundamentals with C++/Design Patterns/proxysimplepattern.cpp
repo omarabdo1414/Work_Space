@@ -17,7 +17,7 @@ class SimpleBox : public Ibox
     public:
         void Open() override
         {
-            std::cout << "Ready to open" << std::endl;
+                std::cout << "Ready to open" << std::endl;
         }
 };
 
@@ -29,7 +29,7 @@ class ProxyBox : public Ibox
 
         void Open() override
         {
-            if(authenticate ())
+            if(authenticate())
             {
                 std::cout << "Success" << std::endl;
                 m_Box.Open();
@@ -39,7 +39,7 @@ class ProxyBox : public Ibox
                 std::cout << "Box Can't be opened" << std::endl;
         }
 
-        bool authenticate ()
+        bool authenticate()
         {
             bool permission = false;
             if(m_UserName == "Omar Abdo" && m_Password == "12345678")

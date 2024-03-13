@@ -3,9 +3,9 @@
 using namespace std;
 
 //default arguments
-inline int sum(int x, int y = 2)
+int sum(int x, int y = 10, int z = 5)
 {
-    return x + y;
+    return x + y + z;
 }
 
 //inline function
@@ -24,9 +24,7 @@ void fun()
 
 int main()
 {
-    std::cout << sum(10, 6) << std::endl;
-
-    print("Hello world");
+    std::cout << sum(10, 5) << std::endl;
 
     fun();
     fun();

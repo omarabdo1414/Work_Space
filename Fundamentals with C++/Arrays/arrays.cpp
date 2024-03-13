@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 //syatax of array
 /*
@@ -33,8 +34,12 @@ int main()
     std::cout << std::endl;
 
     int num[] = {2,3,5,4,9,12,4,56,12,65,89};
-
     int arrSize = sizeof(num) / sizeof(num[0]);
+
+    for(int i = 0; i < arrSize; i++)
+    {
+        std::cout << num[i] << " ";
+    }
 
     std::cout << "size is : " << arrSize << std::endl;
 
@@ -52,6 +57,15 @@ int main()
             std::cout << matrix[i][j] << " ";
         }
         std::cout << std::endl;
+    }
+
+
+    int array[] = {2,3,5,4,9,12,4,56,12,65,89};
+
+    //range based for loop
+    for(const int &i : {1,2,3,4,5})
+    {
+        std::cout << i << std::endl;
     }
 
     return 0;

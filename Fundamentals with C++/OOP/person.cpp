@@ -48,7 +48,8 @@ public:
     }
 };
 
-class Student {
+class Student : public Person
+{
 private:
     int studyLevel;
     int studentId;

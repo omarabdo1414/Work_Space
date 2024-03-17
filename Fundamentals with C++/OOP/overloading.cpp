@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+#include <ostream>
+
+using namespace std;
 
 class Complex
 {
@@ -8,21 +11,20 @@ class Complex
     float imaginary;
     
 public:
-    Complex(float mreal = 0, float mimaginary = 0) : real(mreal), imaginary(mimaginary)
+    Complex(float m_real = 0, float m_imaginary = 0) : real(m_real), imaginary(m_imaginary)
     {
     }
 
-    Complex operator+(const Complex &obj)
+    Complex operator+(Complex &rhs)
     {
         Complex temp;
-
-        temp.real = real + obj.real;
-        temp.imaginary = imaginary + obj.imaginary;
+        temp.real = real + rhs.real;
+        temp.imaginary = imaginary + rhs.imaginary;
 
         return temp;
     }
 
-    friend std::ostream &operator<<(std::ostream &output, Complex const &complex);
+    friend std::ostream& operator<<(std::ostream &output,Complex &input);
 
     void setReal(float rl)
     {
@@ -44,28 +46,24 @@ public:
     }
 };
 
-std::ostream &operator<<(std::ostream &output, Complex const &complex)
+std::ostream& operator<<(std::ostream &output,Complex &input)
 {
-    output << complex.real << " + i" << complex.imaginary;
+    output << input.real << " " << input.imaginary;
 
     return output;
 }
 
+std::string name;
+
 int main()
 {
-    Complex complex1, complex2, result;
-
-    Complex cd;
-
     Complex c1(5, 6);
     Complex c2(6, 77);
     Complex c3(0, 0);
 
-    c2.setImg(9.0);
-
     c3 = c1 + c2;
 
-    std::cout << c3;
+    std::cout << c3 << std::endl;
 
     return 0;
 }

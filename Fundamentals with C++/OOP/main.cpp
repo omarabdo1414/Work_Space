@@ -15,6 +15,12 @@ class Rectangle
         {
             std::cout << "parameterized Constructor Created" << std::endl;
         }
+        Rectangle(Rectangle &rectangle)
+        {
+            length = rectangle.length;
+            width = rectangle.width;
+            std::cout << "Copy Constructor Created" << std::endl;
+        }
         void set_length(float len)
         {
             if(len >= 0)
@@ -48,6 +54,11 @@ class Rectangle
             return length * width;
         }
 
+        int get_count()
+        {
+            return count;
+        }
+
         ~Rectangle()
         {
             std::cout << "Object life time ended" << std::endl;
@@ -56,11 +67,14 @@ class Rectangle
 
 int main()
 {
-    Rectangle rec; //object -- Instance
-    
-    std::cin.get();
+    Rectangle rec(10, 5); //object -- Instance
 
-    Rectangle rec2;
+    //default copy constructor
+    Rectangle rec2(6, 8);
+
+    std::cout << rec.get_count() << " " << rec2.get_count() << std::endl; 
+
+    std::cout << rec << std::endl;
 
     return 0;
 }

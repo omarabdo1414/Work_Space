@@ -1,27 +1,5 @@
 #include <iostream>
 
-/*
-what is polymorphism?
-
-
-overloding
-int sum(int i, int j){
-
-}
-float sum(float i, float j){
-
-}
-string sum(string i, string j){
-
-}
-
-overring
-
-
-*/
-
-
-
 class Shape
 {
 private:

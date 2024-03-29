@@ -7,7 +7,7 @@ private:
     double imag;
 public:
     // Parameterized constructor
-    Complex(double r = 0.0, 
+    explicit Complex(double r = 0.0, 
             double i = 0.0) : real(r), 
                               imag(i)
     {

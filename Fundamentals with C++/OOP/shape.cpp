@@ -22,7 +22,7 @@ public:
     }
 };
 
-class Elips : public Circle
+class Eclips : public Circle
 {
 public:
     void show()
@@ -40,8 +40,11 @@ int main()
 {
     Shape *shape;
     Circle circle;
+    Eclips e;
     shape = &circle;
 
     shape->show();
     circle.show();
+    shape = &e;
+    shape->show();
 }

@@ -24,7 +24,7 @@ public:
         return temp;
     }
 
-    friend std::ostream& operator<<(std::ostream &output,Complex &input);
+    friend std::ostream& operator<<(std::ostream &output, Complex &input);
 
     void setReal(float rl)
     {
@@ -46,14 +46,11 @@ public:
     }
 };
 
-std::ostream& operator<<(std::ostream &output,Complex &input)
+std::ostream& operator<<(std::ostream &output, Complex &input)
 {
     output << input.real << " " << input.imaginary;
-
     return output;
 }
-
-std::string name;
 
 int main()
 {

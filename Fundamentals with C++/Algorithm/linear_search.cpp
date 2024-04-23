@@ -22,5 +22,6 @@ int main()
     std::cin >> key;
 
     linear(list, key);
+
     return 0;
 }

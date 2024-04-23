@@ -1,32 +1,37 @@
 #include <iostream>
+#include <array>
+#include <vector>
 
-template<typename A, typename B>
-class Pair
+template<typename T1, typename T2>
+struct pair
 {
-    private:
-        A first;
-        B second;
-    
-    public:
-        //paramitarized default Constructor
-        Pair(A f, B s) : first(f) , second(s)
-        {}
-
-        void display()
-        {
-            std::cout << "Pair: | " << first << " - " << second << " |" << std::endl;
-        }
+    T1 first;
+    T2 second;
 };
+
+template<typename T1,typename T2>
+pair<T1, T2> make_pair(T1 first, T2 second)
+{
+    pair<T1, T2> p;
+    p.first = first;
+    p.second = second;
+
+    return p;
+}
+
 
 int main()
 {
-    Pair<int, std::string> p(1, "Tasneem");
-    Pair<int, int> p2(2, 3);
-    Pair<float, double> p3(2.3, 5.2);
+    // Pair<int, Pair<std::string, int>> P(1, {"omar", 123});
+    std::vector<pair<int, std::string>> P(make_pair<int, std::string>(1, ))
 
-    p.display();
-    p2.display();
-    p3.display();
+    make_pair<int, std::string>(3, "Omar")
+    P.push_back({4, "mohammed"});
+
+    for(int i = 0; i < P.size(); i++)
+    {
+        std::cout << P[i].first << " " << P[i].second << std::endl;
+    }
 
     return 0;
 }

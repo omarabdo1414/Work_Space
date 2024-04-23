@@ -1,12 +1,12 @@
 #include <iostream>
 
-void bubbleSort(int arr[], int n) {
-    for (int i = 0; i < n-1; i++) {
-        for (int j = 0; j < n-i-1; j++) {
+void bubbleSort(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
             // Compare adjacent elements
             if (arr[j] > arr[j+1]) {
                 // Swap if they are in the wrong order
-                std::swap(arr[j], arr[j+1]);
+                std::swap(arr[j], arr[j+1]); // O(n^2)
             }
         }
     }

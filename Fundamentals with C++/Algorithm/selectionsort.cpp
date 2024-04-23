@@ -1,38 +1,23 @@
 #include <iostream>
-#include <array>
-
-void swap(int *one, int *two)
-{
-    int temp = *one;
-    *one = *two;
-    *two = temp;
-}
 
 void selectionSort(int arr[], int size)
 {
     int i, j, min_idx;
 
-    for (i = 0; i < size - 1; i++)
-    {
+    for (i = 0; i < size - 1; i++){
         min_idx = i;
-        for(j = i + 1; j < size; j++)
-        {
+        for(j = i + 1; j < size; j++){
             if(arr[j] < arr[min_idx])
-            {
                 min_idx = j;
-            }
         }
-
-        swap(&arr[min_idx], &arr[i]);
+        std::swap(arr[min_idx], arr[i]);
     }
 }
 
 void print(int arr[], int size)
 {
     for(int i = 0; i < size; i++)
-    {
         std::cout << arr[i] << " ";
-    }
     std::cout << std::endl;
 }
 

@@ -1,27 +1,22 @@
 #include <iostream>
 
-int binarySerch(int arr[], int left, int right, int key)
-{
-  int middel = (left + right) / 2;
-  while (left <= right)
-  {
-    if (arr[middel] == key)
-    {
-      return middel;
+  int binarySerch(int arr[], int left, int right, int key){
+    int middel = (left + right) / 2;
+    while (left <= right){
+      if (arr[middel] == key){
+        return middel;
+      }
+      if (key < arr[middel]){
+        right = middel - 1;
+        middel = (left + right) / 2;
+      }
+      else{
+        left = middel + 1;
+        middel = (left + right) / 2;
+      }
     }
-    if (key <= arr[middel])
-    {
-      right = middel - 1;
-      middel = (left + right) / 2;
-    }
-    else
-    {
-      left = middel + 1;
-      middel = (left + right) / 2;
-    }
+    return -1;
   }
-  return -1;
-}
 
 // int binarySerch(int arr[], int left, int right, int key)
 // {
@@ -34,9 +29,9 @@ int binarySerch(int arr[], int left, int right, int key)
 //     }
 //     if (key < arr[middel])
 //     {
-//       return binarySerch(arr, left, middel - 1, key);
+//       return binarySerch(arr, left, middel - 1, key); // calling
 //     }
-//     return binarySerch(arr, middel + 1, right, key);
+//     return binarySerch(arr, middel + 1, right, key); // calling
 //   }
 
 //   return -1;
@@ -50,16 +45,14 @@ int main()
   int left = 0, right = size - 1;
   std::cin >> key;
 
-  int result = binarySerch(arr, left, right, key);
+  int result = binarySerch(arr, left, right, key); //calling
 
-  if (result == -1)
-  {
+  if (result == -1){
     std::cout << "Key is not found" << std::endl;
   }
-  else
-  {
+  else{
     std::cout << "The Key (" << arr[result] << ")"
-              << " is found in (" << result << ")" << std::endl;
+              << " is found in index (" << result << ")" << std::endl;
   }
   return 0;
 }

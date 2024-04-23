@@ -5,76 +5,85 @@ class Rectangle
     private:
         float length;
         float width;
-    
+        static int count;
     public:
-        Rectangle() : length(0), width(0)
+    //default Constructor
+    Rectangle() : length(0), width(0)
+    {
+        count++;
+        std::cout << "default Constructor" << std::endl;
+    }
+    //Parameterized Constructor
+    Rectangle(float len, float wid) : length(len), width(wid)
+    {
+        std::cout << "Parameterized Constructor created" << std::endl;
+    }
+    void set_length(float l)
+    {
+        if(l >= 0)
         {
-            std::cout << "Constructor Created" << std::endl;
+            length = l;
         }
-        Rectangle(float len, float wid) : length(len), width(wid)
+        else
         {
-            std::cout << "parameterized Constructor Created" << std::endl;
+            std::cout << "Positive numbers only" << std::endl;
         }
-        Rectangle(Rectangle &rectangle)
+    }
+    float get_length()
+    {
+        return length;
+    }
+    void set_width(float w)
+    {
+        if(w >= 0)
         {
-            length = rectangle.length;
-            width = rectangle.width;
-            std::cout << "Copy Constructor Created" << std::endl;
+            width = w;
         }
-        void set_length(float len)
+        else
         {
-            if(len >= 0)
-            {
-                length = len;
-            }
-            else
-                std::cout << "Error, please Enter a positive number" << std::endl;
+            std::cout << "Positive numbers only" << std::endl;
         }
-        void set_width(float wid)
-        {
-            if(wid >= 0)
-            {
-                width = wid;
-            }
-            else
-                std::cout << "Error, please Enter a positive number" << std::endl;
-        }
+    }
+    float get_width()
+    {
+        return width;
+    }
 
-        float get_length() const
-        {
-            return length;
-        }
-        float get_width() const
-        {
-            return width;
-        }
+    float get_area()
+    {
+        return length * width;
+    }
 
-        float get_area() const
-        {
-            return length * width;
-        }
+    Rectangle merge(Rectangle r1, Rectangle r2)
+    {
+        Rectangle temp;
+        temp.length = r1.length + r2.length;
+        temp.width = r1.width + r2.width;
 
-        int get_count()
-        {
-            return count;
-        }
+        return temp;
+    }
 
-        ~Rectangle()
-        {
-            std::cout << "Object life time ended" << std::endl;
-        }
+    // Destructor
+    ~Rectangle()
+    {
+        std::cout << "Destructor called" << std::endl;
+    }
 };
+
+Rectangle::count = 0;
 
 int main()
 {
-    Rectangle rec(10, 5); //object -- Instance
+    // Rectangle rect1(5, 6);
+    // Rectangle rect2(10, 5);
 
-    //default copy constructor
-    Rectangle rec2(6, 8);
+    // Rectangle r3;
+    // r3 = r3.merge(rect1, rect2);
 
-    std::cout << rec.get_count() << " " << rec2.get_count() << std::endl; 
-
-    std::cout << rec << std::endl;
+    // std::cout << r3.get_length() << " " << r3.get_width() << std::endl;
+    
+    add();
+    add();
 
     return 0;
 }

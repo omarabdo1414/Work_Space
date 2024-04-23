@@ -1,10 +1,18 @@
 #include <iostream>
-#include <string>
+#include <vector>
 
+void swap(int &x, int &y)
+{
+    int temp = x;
+    x = y;
+    y = temp;
+}
 
-int main() {
+int main()
+{
+    int x = 5, y = 6;
 
-    
+    swap(x, y);
 
-    return 0;
+    std::cout << x << " " << y << std::endl;
 }

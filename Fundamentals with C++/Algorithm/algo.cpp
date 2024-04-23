@@ -17,9 +17,9 @@ Analysis
 
 algorithm swap(a, b)
 begin
-temp = a --> one unit of time 1
-a = b    --> one unit of time 1
-b = temp --> one unit of time 1
+temp = a    --> one unit of time 1
+a    = b    --> one unit of time 1
+b    = temp --> one unit of time 1
 end
 
 Time Complexity

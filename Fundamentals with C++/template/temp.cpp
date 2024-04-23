@@ -1,31 +1,28 @@
 #include <iostream>
+#include <vector>
 
 // Template
 // Generic Programming
 
-template <typename T>
-void swap(T &x, T &y)
-{
-    T temp = x;
-    x = y;
-    y = temp;
-}
+// template<typename T>
+// void swap(T *a, T *b)
+// {
+//     T temp = *a;
+//     *a = *b;
+//     *b = temp;
+// }
+
 
 int main()
 {
-    int num1, num2;
-    float x, y;
-    std::string f_name, s_name;
+    std::vector<std::pair<int, std::pair<std::string, double>>> vp;
+    vp.push_back(std::make_pair(1, std::make_pair("Ahmed", 1235)));
+    vp.push_back()
 
-    std::cin >> x >> y >> num1 >> num2 >> f_name >> s_name;
+    for(int i = 0; i < vp.size(); i++)
+    {
+        std::cout << vp[i].first << " " << vp[i].second.first << " " << vp[i].second.second << std::endl;
+    }
 
-    swap(x, y);
-    swap(num1 , num2);
-    swap(f_name, s_name);
-
-    std::cout << x << " " << y << std::endl;
-    std::cout << num1 << " " << num2 << std::endl;
-    std::cout << f_name << " " << s_name << std::endl;
-    
     return 0;
 }

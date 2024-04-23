@@ -20,35 +20,35 @@ void merge(int arr[], int const left, int const mid, int const right)
         rightArray[j] = arr[mid + 1 + j];
     }
 
-    int indexSubArrayOne = 0,
-        indexSubArrayTwo = 0,
-        indexMergeArray = left;
+    int i = 0,
+        j = 0,
+        k  = left;
 
-    while (indexSubArrayOne < subArrayOne && indexSubArrayTwo < subArrayTwo)
+    while (i < subArrayOne && j < subArrayTwo)
     {
-        if(leftArray[indexSubArrayOne] >= rightArray[indexSubArrayTwo]){
-            arr[indexMergeArray] = leftArray[indexSubArrayOne];
-            indexSubArrayOne++;
+        if(leftArray[i] <= rightArray[j]){
+            arr[k] = leftArray[i];
+            i++;
         }
         else{
-            arr[indexMergeArray] = rightArray[indexSubArrayTwo];
-            indexSubArrayTwo++;
+            arr[k] = rightArray[j];
+            j++;
         }
-        indexMergeArray++;
+        k++;
     }
 
-    while (indexSubArrayOne < subArrayOne)
+    while (i < subArrayOne)
     {
-        arr[indexMergeArray] = leftArray[indexSubArrayOne];
-        indexSubArrayOne++;
-        indexMergeArray++;
+        arr[k] = leftArray[i];
+        i++;
+        k++;
     }
 
-    while (indexSubArrayTwo < subArrayTwo)
+    while (j < subArrayTwo)
     {
-        arr[indexMergeArray] = rightArray[indexSubArrayTwo];
-        indexSubArrayTwo++;
-        indexMergeArray++;
+        arr[k] = rightArray[j];
+        j++;
+        k++;
     }
 
     delete[] leftArray;

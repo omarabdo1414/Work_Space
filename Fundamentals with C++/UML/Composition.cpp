@@ -18,10 +18,10 @@ public:
 
 class Room {
 private:
-    int size;
+    int size_;
     
 public:
-    Room() : size(0) {}
+    Room(int size) : size_(size) {}
     // Additional constructor if needed
     // Destructor if needed
 };

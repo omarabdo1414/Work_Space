@@ -12,7 +12,7 @@ class IntegerList
         std::cout<<"Constructor called\n";
     }
     //copy constructor using copy semantics and l-value reference
-    IntegerList(const IntegerList &obj):data(new int[obj.size]),size(obj.size)
+    IntegerList(const IntegerListobj &):data(new int[obj.size]),size(obj.size)
     {
         std::cout<<"Copy Constructor called\n";
         for(int i =0;i<obj.size;i++)

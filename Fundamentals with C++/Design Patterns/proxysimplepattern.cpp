@@ -7,51 +7,51 @@ Task:
 
 class Ibox
 {
-    public:
-        virtual void Open() = 0;
-        virtual ~Ibox() {}
+public:
+    virtual void Open() = 0;
+    virtual ~Ibox() {}
 };
 
 class SimpleBox : public Ibox
 {
-    public:
-        void Open() override
-        {
-                std::cout << "Ready to open" << std::endl;
-        }
+public:
+    void Open() override
+    {
+        std::cout << "Ready to open" << std::endl;
+    }
 };
 
 class ProxyBox : public Ibox
 {
-    public:
-        ProxyBox(std::string name, std::string password) : m_UserName(name), m_Password(password)
-        {}
+public:
+    ProxyBox(std::string name, std::string password) : m_UserName(name), m_Password(password)
+    {
+    }
 
-        void Open() override
+    void Open() override
+    {
+        if (authenticate())
         {
-            if(authenticate())
-            {
-                std::cout << "Success" << std::endl;
-                m_Box.Open();
-                std::cout << "Open the Box" << std::endl;
-            }
-            else 
-                std::cout << "Box Can't be opened" << std::endl;
+            std::cout << "Success" << std::endl;
+            m_Box.Open();
+            std::cout << "Open the Box" << std::endl;
+        }
+        else
+            std::cout << "Box Can't be opened" << std::endl;
+    }
+
+    bool authenticate()
+    {
+        bool permission = false;
+        if (m_UserName == "Omar Abdo" && m_Password == "12345678")
+        {
+            permission = true;
         }
 
-        bool authenticate()
-        {
-            bool permission = false;
-            if(m_UserName == "Omar Abdo" && m_Password == "12345678")
-            {
-                permission = true;
-            }
-            
-            return permission;
-        }
+        return permission;
+    }
 
-
-    private:
+private:
     std::string m_UserName;
     std::string m_Password;
     SimpleBox m_Box;

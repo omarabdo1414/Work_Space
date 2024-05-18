@@ -21,7 +21,7 @@ public:
         width = w;
     }
  
-    int area() { return length * breadth; }
+    int area() { return length * width; }
 };
  
 int main()
@@ -33,15 +33,23 @@ int main()
  
     shared_ptr<Rectangle> P2(P1);
     // P2 = P1;
+    
+    {
+        shared_ptr<Rectangle> p3(P1);
+        cin.get();
+        cout << P1.use_count() << endl;
+        cin.get();
+    }
  
-    // This'll print 50
+    // // This'll print 50
     cout << P2->area() << endl;
  
     // This'll now not give an error,
-    // cout << P1->area() << endl;
- 
     // This'll also print 50 now
+    cout << P1->area() << endl;
+ 
     // This'll print 2 as Reference Counter is 2
     cout << P1.use_count() << endl;
+
     return 0;
 }

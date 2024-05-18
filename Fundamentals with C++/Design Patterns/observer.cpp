@@ -122,7 +122,7 @@ public:
         int minutes = subject.GetMinutes();
         int seconds = subject.GetSeconds();
 
-        std::cout << "Digital time is " << hours << " : " << minutes << " : " << seconds << std::endl;
+        std::cout << "Analog time is " << hours << " : " << minutes << " : " << seconds << std::endl;
     }
 
 private:

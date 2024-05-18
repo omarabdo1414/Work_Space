@@ -1,31 +1,43 @@
 #include <iostream>
 #include <set>
+
 int main()
 {
-    std::set<int> mySet = {10, 20, 30, 40, 50, 60, 70, 80};
-    mySet.insert(15);
-    mySet.insert(25);
+    std::set<int, std::greater<int>> s{1, 2, 3, 4, 6};
+    std::multiset<std::string, std::greater<std::string>> set_str = {"Omar", "Ahmed", "Ahmed"};
 
-    auto itlow = mySet.lower_bound(25);
-    auto itup = mySet.upper_bound(50);
-    mySet.erase(itlow, itup);
-    // std::cout << *itlow << " " << *itup << std::endl;
+    s.insert(5);
+    s.emplace(7);
 
-    for (auto itr = mySet.begin(); itr != mySet.end(); itr++)
+    s[0] = 12; // [] random access , at
+
+    auto it = s.begin();
+
+    s.insert(it, 8); // log n -> 1
+
+    s.emplace_hint(it, 10); // O(1)
+    it = s.emplace_hint(it, 9);
+
+    // std::cout << s.count(3) << std::endl;
+
+    auto iter = s.emplace(11);
+
+    s.erase(11);
+    auto iterator = s.begin();
+    ++++++iterator;
+    s.erase(iterator);
+
+    for(auto ss : s)
     {
-        std::cout << *itr << std::endl;
+        std::cout << ss << std::endl;
     }
 
-    // for (auto &numr : mySet)
-    // {
-    //     std::cout << numr << std::endl;
-    // }
+    std::cout << set_str.count("Ahmed") << std::endl;
 
-    // std::multiset<int> mySet2 = {1, 3, 2,5,2,6,7, 4, 6, 7, 5};
-    // for(const auto &num : mySet2)
-    // {
-    //     std::cout << num  << ", ";
-    // }
+    for(auto set : set_str)
+    {
+        std::cout << set << std::endl;
+    }
 
     return 0;
 }

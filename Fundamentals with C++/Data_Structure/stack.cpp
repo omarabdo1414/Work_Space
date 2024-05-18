@@ -1,7 +1,8 @@
 #include <iostream>
 
 const int MAX_SIZE = 100;
-template <typename T>
+
+template<class T>
 class Stack
 {
 private:
@@ -30,7 +31,7 @@ public:
 
     bool is_empty()
     {
-        return top < 0;
+        return top < 0; // 1
     }
     
     void pop()
@@ -40,12 +41,12 @@ public:
             top--;
         }
         else
-            std::cout << "Stack is Empty pop";
+            std::cout << "Stack is Empty in pop";
     }
-
+    
     void pop(T &Element)
     {
-        if (is_empty())
+        if (!is_empty())
         {
             Element = item[top];
             top--;
@@ -56,7 +57,7 @@ public:
 
     void getTop(T &stackTop)
     {
-        if (is_empty())
+        if (!is_empty())
         {
             stackTop = item[top];
             std::cout << stackTop;
@@ -68,7 +69,7 @@ public:
     void print()
     {
         std::cout << "[ ";
-        for (auto i = top; i >= 0; i--)
+        for (int i = top; i >= 0; i--)
         {
             std::cout << item[i] << ", ";
         }
@@ -86,13 +87,25 @@ int main()
     arr.push(1);
     arr.push(3);
     arr.push(16);
+    arr.pop();
+
+    int y = 0;
+    arr.pop(y);
 
     arr.print();
+
+    std::cout << y << std::endl;
+    
+    int x = 0;
+    arr.getTop(x);
+    std::cout << std::endl;
+
+    // std::cout << std::endl;
 
     Stack<std::string> string;
     string.push("Omar");
     string.push("Tarek");
-    string.push("Ammat");
+    string.push("Ammar");
     string.push("Alaa");
 
     string.print();

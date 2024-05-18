@@ -1,18 +1,75 @@
 #include <iostream>
-#include <vector>
 
-void swap(int &x, int &y)
-{
-    int temp = x;
-    x = y;
-    y = temp;
-}
+// int number = 5;
+// double num = 10;
 
 int main()
 {
-    int x = 5, y = 6;
+    char oper;
+    float num1, num2;
 
-    swap(x, y);
+    int x;
+    
+    bool flage = 0;
 
-    std::cout << x << " " << y << std::endl;
+    // while (flage == 0)
+    // {
+    //     std::cin >> num1 >> oper >> num2; // 4 + 6
+    //     switch (oper)
+    //     {
+    //     case '+':
+    //         std::cout << num1 + num2 << std::endl;
+    //         flage = 1;
+    //         break;
+    //     case '-':
+    //         std::cout << num1 - num2 << std::endl;
+    //         flage = 1;
+    //         break;
+    //     case '*':
+    //         std::cout << num1 * num2 << std::endl;
+    //         flage = 1;
+    //         break;
+    //     case '/':
+    //         std::cout << num1 / num2 << std::endl;
+    //         flage = 1;
+    //         break;
+    //     default:
+    //         std::cout << "Invalid input please try again." << std::endl;
+    //         break;
+    //     }
+    // }
+
+    // int num = 0;
+    // for(int i = 0; i < 10; i++)
+    // {
+    //     std::cin >> num;
+    //     if(num % 2 == 0) 
+    //     {
+    //         std::cout << "Even number" << std::endl;
+    //     }
+    //     else
+    //     {
+    //         std::cout << "Odd number" << std::endl;
+    //     }
+    // }
+
+    int i = 0;
+    while(i < 10)
+    {
+        std::cout << "number is: " << i << std::endl;
+        i++;
+    }
+
+    std::cout << "======================================" << std::endl;
+
+    do{
+        std::cout << "numeber is: " << i << std::endl;
+        i++;
+    }while( i < 0 ); // 11
+
+    std::cout << "======================================" << std::endl;
+
+    std::cout << "numeber is: " << i << std::endl;
+
+    return 0;
 }

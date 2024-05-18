@@ -9,6 +9,5 @@ int main()
     std::cout << "Capacity is : " << v.capacity() << std::endl;
     std::cout << "Maximum size is : " << v.max_size() << std::endl;
 
-
     return 0;
 }

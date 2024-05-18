@@ -1,5 +1,6 @@
 #include <iostream>
 #include <list>
+#include <algorithm>
 
 int main()
 {
@@ -7,10 +8,12 @@ int main()
 
     employee_list.sort(std::less<std::string>());
 
+    employee_list.remove("Omar");
+
     std::cout << "Employee Name \n";
-    for(auto it : employee_list)
+    for(auto employee : employee_list)
     {
-        std::cout << it << std::endl;
+        std::cout << employee << std::endl;
     }
 
     return 0;

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 int main()
@@ -27,9 +28,8 @@ int main()
             }
         }
     }
-    auto it = v.begin();
-
-    for(; it != v.end(); it++)
+    
+    for(auto it = v.begin(); it != v.end(); it++)
     {
         cout << *it << " ";
     }

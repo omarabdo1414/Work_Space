@@ -8,10 +8,18 @@ public:
     virtual ~ILogger() = default;
 };
 
-class Logger : public ILogger {
+class Bubble : public ILogger {
 public:
     void log(const std::string& message) override {
         std::cout << "Logging: " << message << std::endl;
+    }
+};
+
+class Merge : public ILogger
+{
+    public:
+    void log(const std::string& message) override {
+        std::cout << "Logging: " << message << " welcome to the App" << std::endl;
     }
 };
 
@@ -31,9 +39,10 @@ public:
 int main() {
     // Create Logger instance
     Logger logger;
+    Log2 log;
 
     // Inject Logger into UserService
-    UserService userService(logger);
+    UserService userService(log);
 
     userService.performAction("John", "login");
 

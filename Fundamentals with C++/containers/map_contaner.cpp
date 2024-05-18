@@ -4,30 +4,24 @@
 
 int main()
 {
-    std::map<char, int> m;
-    std::map<char, int> m2;
+    std::map<std::string, std::string> m = {{"Ahmed", "CS"}, {"Khaled", "CIS"}};
+    std::map<int, std::string> map = {{1, "Omar"}, {2, "Ahmed"}};
 
-    m.insert({'a', 1});
+    map.count("Ahmed");
 
-    auto it = m.begin();
-    it = m.insert(it , {'b', 2});
-    it = m.insert(it , {'c', 3});
-    it = m.insert(it , {'d', 4});
-    it = m.insert(it , {'e', 5});
-    it = m.insert(it , {'f', 6});
-    m['g'] = 7;
+    std::map<int, int> ma = {{2, 1}, {3, 6}, {4, 10}, {5, 15}, {15, 7}};
 
-    m['g'] = 10;
+    map[0] = "Hossam";
 
-    m2.insert(m.begin(), m.find('e'));
+    std::cout << "Lower Bound: ";
+    std::cout << ma.lower_bound(1)->first << " " << ma.lower_bound(1)->second << std::endl;
+    std::cout << "Upper Bound: ";
+    std::cout << ma.upper_bound(5)->first << " " << ma.upper_bound(5)->second << std::endl;
 
-    auto i = m.find('c');
-    m.erase(i, m.find('f'));
-
-    for(auto mm: m)
-    {
-        std::cout << mm.first << " : " << mm.second << std::endl;
-    }
+    // for(auto m : map)
+    // {
+    //     std::cout << m.first << " " << m.second << std::endl;
+    // }
 
     return 0;
 }

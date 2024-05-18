@@ -1,8 +1,15 @@
 #include <iostream>
 #include <string>
 
+class ILogger
+{
+    public:
+    virtual void log(const std::string& message) = 0;
+};
+
 // Logger class
-class Logger {
+class Logger : public ILogger
+{
 public:
     void log(const std::string& message) {
         std::cout << "Logging: " << message << std::endl;
@@ -12,9 +19,10 @@ public:
 // UserService class without dependency injection
 class UserService {
 private:
-    Logger logger;
+    ILogger *logger;
 
 public:
+    
     void performAction(const std::string& username, const std::string& action) {
         logger.log(username + " performed action: " + action);
     }

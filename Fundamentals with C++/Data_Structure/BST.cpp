@@ -44,7 +44,6 @@ BST* BST::Insert(BST* root, int value){
     {
         //right Node
         //should be in the right side
-
         root->right = Insert(root->right, value);
     }
 

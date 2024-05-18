@@ -3,10 +3,12 @@
 
 class MyClass{
     public:
+        // default
         MyClass()
         {
             std::cout << "Constructor invoked" << std::endl;
         }
+
         ~MyClass()
         {
             std::cout << "Destructor invoked" << std::endl;
@@ -15,12 +17,14 @@ class MyClass{
 
 int main()
 {
-    std::weak_ptr<int> wptr;
-    {
-        std::shared_ptr<int> shptr = std::make_shared<int>(25);
-        wptr = shptr;
-        std::cout << shptr.use_count() << std::endl;
-    }
+    std::unique_ptr<int> ptr(new int(5));
 
+    std::cout << *ptr << std::endl;
+
+    std::unique_ptr<int> ptr2(std::move(ptr));
+
+    // std::cout << *ptr << std::endl;
+    std::cout << *ptr2 << std::endl;
+    
     return 0;
 }

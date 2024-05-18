@@ -15,6 +15,7 @@ public:
     Stack() : top(NULL)
     {
     }
+
     void push(T value)
     {
         Node *newItem = new Node;
@@ -41,7 +42,6 @@ public:
         {
             std::cout << "Stack is Empty on pop";
         }
-
         else
         {
             Node *temp = top;
@@ -56,7 +56,7 @@ public:
     {
         if (Empty())
         {
-            std::cout << "Stack is Empty on pop";
+            std::cout << "Stack is Empty on pop save";
         }
 
         else
@@ -74,14 +74,15 @@ public:
     {
         if (Empty())
         {
-            std::cout << "Stack is Empty on pop";
+            std::cout << "Stack is Empty on getTop";
         }
-
         else
         {
             topItem = top->item;
             return topItem;
         }
+
+        return -1;
     }
 
     void Display()

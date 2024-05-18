@@ -1,16 +1,19 @@
 #include <iostream>
+#include <memory>
 
 class SingletonClass {
 private:
     SingletonClass() {
+        
         std::cout << "instance created" << std::endl;
     }
-    static SingletonClass* instance;
+    static std::shared_ptr<SingletonClass*> instance;
+    static int count;
 
 public:
     static SingletonClass* getInstance() {
         if (!instance) {
-            instance = new SingletonClass();
+            instance = new SingletonClass(); // creation
         }
         return instance;
     }
@@ -22,18 +25,16 @@ public:
 
 SingletonClass* SingletonClass::instance = nullptr;
 
+int SingletonClass::count = 0;
+
 int main() {
-    SingletonClass* singletonInstance1 = SingletonClass::getInstance();
-    singletonInstance1->showMessage();
+    SingletonClass* obj1 = SingletonClass::getInstance();
+    obj1->showMessage();
 
-    // std::cin.get();
+    SingletonClass* obj2 = SingletonClass::getInstance();
+    obj2->showMessage();
 
-    SingletonClass* singletonInstance2 = SingletonClass::getInstance();
-    singletonInstance2->showMessage();
-
-    // std::cin.get();
-
-    if (singletonInstance1 == singletonInstance2) {
+    if (obj1 == obj2) {
         std::cout << "Both instances are the same." << std::endl;
     }
 

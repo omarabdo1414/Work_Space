@@ -2,12 +2,13 @@
 #include <algorithm>
 #include <map>
 
-// int arr[10000];
-// int freq[10000];
+int arr[10000];
+int freq[10000];
 
 int main()
 {
     // int n, element;
+
     // std::cin >> n;
 
     // for(int i = 0; i < n; i++)

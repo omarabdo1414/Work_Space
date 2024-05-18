@@ -2,13 +2,22 @@
 
 class MyClass {
 public:
-    // Default Constructor
+    MyClass(): size(0), data(nullptr)
+    {
+        std::cout << "Defult Constructor called!" << std::endl;
+    } 
+    // Parameterized Constructor
     MyClass(int size) : size(size), data(new int[size]) {
-        std::cout << "Default Constructor called!" << std::endl;
+        std::cout << "Parameterized Constructor called!" << std::endl;
+    }
+
+    MyClass(MyClass &obj) : size(obj.size), data(new int[obj.size])
+    {
+        std::cout << "Copy Constructor is Called" << std::endl;
     }
 
     // Move constructor
-    MyClass(MyClass&& other)
+    MyClass(MyClass&& other) // rvalue referance
         : size(other.size), data(other.data) {
         std::cout << "Move constructor called!" << std::endl;
         other.size = 0;
@@ -43,34 +52,16 @@ private:
     int* data;
 };
 
-/*
-move constructor
-class A{
-    A(const A&){}
-    A(const A&&){}
-};
-
-move assignment operator
-
-class A{
-    A& operator = (const A&){
-        ------
-    }
-    A& operator= (const A&&)
-    {
-        --------
-    }
-}
-
-*/
-
 
 int main() {
     MyClass source(5);
 
     // Use std::move to transfer ownership from source to destination
-    MyClass destination(10);
+    MyClass destination(15);
+
     destination = std::move(source);
+
+    int i = 5;
 
     return 0;
 }

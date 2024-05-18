@@ -21,7 +21,8 @@ int main()
 {
     shared_ptr<Rectangle> P1(new Rectangle(10, 5));
    
-    weak_ptr<Rectangle> P2 (P1);
+    weak_ptr<Rectangle> P2(P1);
+    weak_ptr<Rectangle> p3(P1);
    
     cout << P1->area() << endl;
 

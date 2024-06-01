@@ -1,0 +1,8 @@
+../Core/Inc/usart.h:35:2:Usart::Usart(USART)	16	static
+../Core/Inc/usart.h:58:7:void Usart::InitializeUSART1()	24	static
+../Core/Inc/usart.h:76:8:static void* Usart::operator new(size_t, USART)	16	static
+../Core/Inc/usart.h:81:7:void Usart::sendChar(char)	16	static
+../Core/Inc/usart.h:87:7:char Usart::read()	16	static
+../Core/Inc/usart.h:93:7:void Usart::sendString(char*)	24	static
+../Core/Src/main.cpp:3:6:void Led_Init()	4	static
+../Core/Src/main.cpp:11:5:int main()	24	static

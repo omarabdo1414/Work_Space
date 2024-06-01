@@ -1,0 +1,10 @@
+06:54:27 **** Build of configuration Debug for project USART ****
+make -j12 all 
+arm-none-eabi-size  USART.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1080	     12	   1572	   2664	    a68	USART.elf
+Finished building: default.size.stdout
+ 
+
+06:54:28 Build Finished. 0 errors, 0 warnings. (took 288ms)
+

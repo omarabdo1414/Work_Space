@@ -1,0 +1,4 @@
+../Core/Src/motor.cpp:17:1:Motor::Motor(const Motor_Config&)	16	static
+../Core/Src/motor.cpp:24:6:void Motor::motorMoveCW()	16	static
+../Core/Src/motor.cpp:31:6:void Motor::motorMoveCCW()	16	static
+../Core/Src/motor.cpp:39:6:void Motor::MotorStop()	16	static

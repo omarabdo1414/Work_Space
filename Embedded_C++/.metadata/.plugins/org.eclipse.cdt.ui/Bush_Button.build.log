@@ -1,0 +1,10 @@
+14:57:30 **** Build of configuration Debug for project Bush_Button ****
+make -j12 all 
+arm-none-eabi-size  Bush_Button.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1168	     12	   1572	   2752	    ac0	Bush_Button.elf
+Finished building: default.size.stdout
+ 
+
+14:57:30 Build Finished. 0 errors, 0 warnings. (took 289ms)
+

@@ -59,9 +59,10 @@ private:
 
 int main()
 {
-    ProxyBox open("Omar Abdo", "12345678");
+    ProxyBox open("OmarAbdo", "12345678");
 
     open.Open();
 
     return 0;
 }
+

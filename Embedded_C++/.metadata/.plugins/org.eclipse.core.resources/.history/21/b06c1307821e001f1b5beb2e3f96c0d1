@@ -1,0 +1,47 @@
+
+#include "main.h"
+#include "FreeRTOS.h"
+#include "task.h"
+
+TaskHandle_t GreenLED_TaskHandle;
+
+void redLED(void *rl)
+{
+	RCC->APB2ENR = (1 << 2);
+	GPIOA->CRL = (1 << 8);
+	while(1)
+	{
+		GPIOA->ODR = (1 << 2);
+		vTaskDelay(10000 / portTICK_PERIOD_MS);
+	}
+}
+
+void greenLED(void *rl)
+{
+	RCC->APB2ENR = (1 << 2);
+	GPIOA->CRL = (1 << 4);
+	while(1)
+	{
+		GPIOA->ODR = (1 << 1);
+		//Suspend the redLED task
+		vTaskSuspend(GreenLED_TaskHandle);
+
+		vTaskDelay(5000 / portTICK_PERIOD_MS);
+		//Return from Suspending
+		vTaskResume(GreenLED_TaskHandle);
+	}
+}
+
+int main(void)
+{
+	xTaskCreate(redLED, "Red LED Task", 300, NULL, 2, &GreenLED_TaskHandle);
+	xTaskCreate(greenLED, "Green LED Task", 300, NULL, 2, NULL);
+	vTaskStartScheduler();
+
+  while (1)
+  {
+
+  }
+
+}
+

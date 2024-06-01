@@ -67,16 +67,36 @@ private:
     }
 };
 
+class SelectionSort : public SortingStrategy
+{
+public:
+    void Sort(int arr[], int size) const override
+    {
+        int i, j, min_idx;
+
+        for (i = 0; i < size - 1; i++)
+        {
+            min_idx = i;
+            for (j = i + 1; j < size; j++)
+            {
+                if (arr[j] < arr[min_idx])
+                    min_idx = j;
+            }
+            std::swap(arr[min_idx], arr[i]);
+        }
+    }
+};
+
 // Context class
 class Sorter
 {
 private:
-    SortingStrategy* sortingStrategy;
+    SortingStrategy *sortingStrategy;
 
 public:
-    Sorter(SortingStrategy* strategy) : sortingStrategy(strategy) {}
+    Sorter(SortingStrategy *strategy) : sortingStrategy(strategy) {}
 
-    void SetStrategy(SortingStrategy* strategy)
+    void SetStrategy(SortingStrategy *strategy)
     {
         sortingStrategy = strategy;
     }
@@ -94,8 +114,9 @@ int main()
 
     BubbleSort bubbleSort;
     QuickSort quickSort;
+    SelectionSort selection;
 
-    Sorter sorter(&bubbleSort);
+    Sorter sorter(&bubbleSort); // user
     sorter.PerformSort(arr, size);
 
     std::cout << "Array after bubble sort: ";
@@ -109,6 +130,16 @@ int main()
     sorter.PerformSort(arr, size);
 
     std::cout << "Array after quick sort: ";
+    for (int i = 0; i < size; ++i)
+    {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+    
+    sorter.SetStrategy(&selection);
+    sorter.PerformSort(arr, size);
+
+    std::cout << "Array after Selection sort: ";
     for (int i = 0; i < size; ++i)
     {
         std::cout << arr[i] << " ";

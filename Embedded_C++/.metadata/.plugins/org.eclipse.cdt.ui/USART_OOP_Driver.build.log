@@ -1,0 +1,10 @@
+06:54:28 **** Build of configuration Debug for project USART_OOP_Driver ****
+make -j12 all 
+arm-none-eabi-size  USART_OOP_Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1432	     12	   1572	   3016	    bc8	USART_OOP_Driver.elf
+Finished building: default.size.stdout
+ 
+
+06:54:28 Build Finished. 0 errors, 0 warnings. (took 273ms)
+

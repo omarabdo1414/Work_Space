@@ -1,0 +1,27 @@
+
+#include "main.h"
+#include "FreeRTOS.h"
+#include "task.h"
+
+void redLED(void *rl)
+{
+	RCC->APB2ENR = (1 << 2);
+	GPIOA->CRL = (1 << 8);
+	while(1)
+	{
+		GPIOA->ODR = (1 << 2);
+		vTaskDelay(100 / portTICK_PERIOD_MS);
+	}
+}
+
+int main(void)
+{
+	vTaskCreate();
+
+  while (1)
+  {
+
+  }
+
+}
+

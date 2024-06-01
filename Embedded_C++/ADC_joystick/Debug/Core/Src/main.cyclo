@@ -1,0 +1,7 @@
+../Core/Src/main.c:19:5:main	1
+../Core/Src/main.c:45:6:Led_blinking	3
+../Core/Src/main.c:52:7:adcInit_Ch1	3
+../Core/Src/main.c:88:5:adcRead	2
+../Core/Src/main.c:97:6:Clock_72	3
+../Core/Src/main.c:112:6:adcInit_Ch0	3
+../Core/Src/main.c:146:5:adcRead_0	2

@@ -1,0 +1,4 @@
+../Core/Src/dio.c:18:15:Dio_ReadChannel	24	static
+../Core/Src/dio.c:40:6:Dio_WriteChannel	24	static
+../Core/Src/dio.c:61:19:Dio_ReadPort	24	static
+../Core/Src/dio.c:81:6:Dio_WritePort	16	static

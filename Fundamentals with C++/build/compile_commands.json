@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/hellobinary.dir/includes_CXX.rsp -g -o CMakeFiles\\hellobinary.dir\\main.cpp.obj -c \"C:\\Users\\Maydoum\\OneDrive\\Desktop\\Work_Space\\Fundamentals with C++\\Cmake\\main.cpp\"",
+  "file": "C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/Cmake/main.cpp",
+  "output": "CMakeFiles/hellobinary.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/hellobinary.dir/includes_CXX.rsp -g -o CMakeFiles\\hellobinary.dir\\library\\target.cpp.obj -c \"C:\\Users\\Maydoum\\OneDrive\\Desktop\\Work_Space\\Fundamentals with C++\\Cmake\\library\\target.cpp\"",
+  "file": "C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/Cmake/library/target.cpp",
+  "output": "CMakeFiles/hellobinary.dir/library/target.cpp.obj"
+},
+{
+  "directory": "C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/build/lib",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\wifi_lib.dir\\wifi.cpp.obj -c \"C:\\Users\\Maydoum\\OneDrive\\Desktop\\Work_Space\\Fundamentals with C++\\Cmake\\lib\\wifi.cpp\"",
+  "file": "C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/Cmake/lib/wifi.cpp",
+  "output": "lib/CMakeFiles/wifi_lib.dir/wifi.cpp.obj"
+}
+]

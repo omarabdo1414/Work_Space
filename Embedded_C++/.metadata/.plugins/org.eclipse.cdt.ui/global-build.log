@@ -1,0 +1,455 @@
+12:13:50 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+12:15:45 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+12:23:00 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+12:23:58 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+12:25:41 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+12:29:19 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+12:30:41 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+12:32:00 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+12:32:12 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+12:58:30 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:00:52 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:00:58 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:01:33 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:03:13 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:04:26 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:38:24 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:40:17 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:40:37 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:42:59 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:43:23 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:44:26 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:45:37 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:45:54 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:47:17 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:48:26 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:51:27 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:52:46 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:54:12 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:55:16 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:56:32 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:57:16 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:57:46 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:58:31 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+13:59:31 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:00:30 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:01:02 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:02:40 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:03:02 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:03:50 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:04:18 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:05:04 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:13:37 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:24:23 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:27:16 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:27:23 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:27:41 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:29:48 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:30:27 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:45:28 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:45:59 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:46:19 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:47:12 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:47:15 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:48:01 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:48:50 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:49:22 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:50:08 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:52:50 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:53:11 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:53:24 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:53:42 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:55:03 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:57:01 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:57:30 **** Build of configuration Debug for project Bush_Button ****
+make -j12 all 
+arm-none-eabi-size  Bush_Button.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1168	     12	   1572	   2752	    ac0	Bush_Button.elf
+Finished building: default.size.stdout
+ 
+14:58:03 **** Incremental Build of configuration Debug for project GPIO ****
+make -j12 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1572	   2312	    908	GPIO.elf
+Finished building: default.size.stdout
+ 

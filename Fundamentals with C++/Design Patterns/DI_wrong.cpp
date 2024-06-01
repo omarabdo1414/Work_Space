@@ -1,14 +1,8 @@
 #include <iostream>
 #include <string>
 
-class ILogger
-{
-    public:
-    virtual void log(const std::string& message) = 0;
-};
-
 // Logger class
-class Logger : public ILogger
+class Logger 
 {
 public:
     void log(const std::string& message) {
@@ -19,7 +13,7 @@ public:
 // UserService class without dependency injection
 class UserService {
 private:
-    ILogger *logger;
+    Logger *logger;
 
 public:
     

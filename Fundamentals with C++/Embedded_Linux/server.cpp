@@ -1,8 +1,9 @@
 #include <iostream>
 #include <winsock.h>
+#include <sys/socket.h>
 
 // #pragma comment(lib, "Win32/winsock.lib")
-#define PORT 9909
+#define PORT 8080
 
 struct sockaddr_in srv;
 fd_set fr, fw, fe;

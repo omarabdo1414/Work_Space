@@ -1,0 +1,70 @@
+
+#include "main.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+
+TaskHandle_t RedLED_TaskHandle;
+
+QueueHandle_t queue;
+
+void redLED(void *rl)
+{
+	RCC->APB2ENR = (1 << 2);
+	GPIOA->CRL = (1 << 8);
+	unsigned long priority = uxTaskPriorityGet(RedLED_TaskHandle);
+	priority += 2;
+	vTaskPrioritySet(RedLED_TaskHandle, priority);
+
+	char control = 'w';
+	while(1)
+	{
+		GPIOA->ODR = (1 << 2);
+		xQueueSendToBack(queue, control, portMAX_DELAY);
+//		vTaskDelay(100 / portTICK_PERIOD_MS);
+	}
+}
+
+void greenLED(void *rl)
+{
+	RCC->APB2ENR = (1 << 2);
+	GPIOA->CRL = (1 << 4);
+	char received_control = 0;
+	while(1)
+	{
+
+		//Suspend the redLED task
+		vTaskSuspend(RedLED_TaskHandle);
+		vTaskDelay(5000 / portTICK_PERIOD_MS);
+		//Return from Suspending
+		vTaskResume(RedLED_TaskHandle);
+		xQueueReceive(queue, &received_control, portMAX_DELAY);
+
+		if(received_control == 'w')
+		{
+			GPIOA->ODR = (1 << 1);
+		}
+	}
+}
+
+
+
+int main(void)
+{
+	queue = xQueueCreate(5, sizeof(char));
+
+	if(queue != NULL)
+	{
+		xTaskCreate(redLED, "Red LED Task", 300, NULL, 2, &RedLED_TaskHandle);
+		xTaskCreate(greenLED, "Green LED Task", 300, NULL, 2, NULL);
+	}
+
+	vTaskStartScheduler();
+
+  while (1)
+  {
+
+  }
+
+}
+

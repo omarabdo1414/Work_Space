@@ -1,0 +1,6 @@
+C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/Project/build/CMakeFiles/hellobinary.dir
+C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/Project/build/CMakeFiles/edit_cache.dir
+C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/Project/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/Project/build/lib/CMakeFiles/wifi_lib.dir
+C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/Project/build/lib/CMakeFiles/edit_cache.dir
+C:/Users/Maydoum/OneDrive/Desktop/Work_Space/Fundamentals with C++/Project/build/lib/CMakeFiles/rebuild_cache.dir

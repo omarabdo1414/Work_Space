@@ -1,4 +1,7 @@
 #include <iostream>
+#include <thread>
+#include <chrono>
+#include <algorithm>
 
 class Subject {
 public:
@@ -26,8 +29,11 @@ public:
     }
 
     void Request() override {
+        using namespace std::literals::chrono_literals;
         std::cout << "Proxy: Checking access before forwarding request." << std::endl;
         std::cout << "Proxy: Logging the request." << std::endl;
+        std::cout << "Processing the request..." << std::endl;
+        std::this_thread::sleep_for(5s);
         realSubject->Request();
     }
 };

@@ -1,0 +1,2 @@
+../Core/Src/main.cpp:16:5:int main()	6
+../Core/Src/main.cpp:46:6:void vGPIOInit()	1

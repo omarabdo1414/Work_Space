@@ -1,0 +1,56 @@
+#include "main.h"
+#include "mcal.h"
+
+// GPIO Initialization Function
+void vGPIOInit(void)
+{
+    // Enable clock for GPIOB and GPIOC
+    RCC->APB2ENR |= (1 << 3) | (1 << 4) | (1 << 1);
+
+    // Configure PC13 as output
+    GPIOC->CRH &= ~(0xF << (4 * 5));   // Clear current settings
+    GPIOC->CRH |= (0x2 << (4 * 5));    // Set PC13 as General purpose output push-pull, max speed 2 MHz
+
+    // Configure PA1 as output
+	GPIOA->CRL = (OUTPUT_MAX_SPEED_50 << PIN_A1);
+
+    // Configure PB4 as input with pull-up
+    GPIOB->CRL &= ~(0xF << (4 * 4));   // Clear current settings
+    GPIOB->CRL |= (0x8 << (4 * 4));    // Set PB4 as input with pull-up/pull-down
+
+    // Enable pull-up for PB4
+    GPIOB->ODR |= (1 << 4);            // Set PB4 to high (pull-up enabled)
+}
+
+enum Status
+{
+	pressed = 0,
+	notPressed = 1,
+};
+
+int main(void)
+{
+  vGPIOInit();
+
+  while (1)
+  {
+	  Status buttonState = static_cast<Status>((GPIOB->IDR & (1 << 4)) ? 1 : 0);
+	  if(buttonState == pressed)
+	  {
+		  GPIOC->ODR = (1 << 13);
+		  GPIOA->ODR = (1 << 1);
+		  for(int i = 0; i < 100000; i++);
+		  GPIOC->ODR &=~(1 << 13);
+		  GPIOA->ODR &=~ (1 << 1);
+		  for(int i = 0; i < 100000; i++);
+	  }
+	  else
+	  {
+		  GPIOC->ODR &=~(1 << 13);
+		  for(int i = 0; i < 100000; i++);
+	  }
+
+
+  }
+  /* USER CODE END 3 */
+}

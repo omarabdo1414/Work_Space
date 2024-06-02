@@ -1,0 +1,3 @@
+../Core/Src/main.c:13:5:main	2
+../Core/Src/main.c:32:6:WelcomeTask	1
+../Core/Src/main.c:42:6:TempSensorTask	1

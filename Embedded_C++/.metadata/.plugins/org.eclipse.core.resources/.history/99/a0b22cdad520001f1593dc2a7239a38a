@@ -1,0 +1,126 @@
+extern "C"
+{
+    #include "main.h"
+}
+
+#include "mcal.h"
+#include "motor.h"
+
+enum Status
+{
+    pressed,
+    notPressed = 1
+};
+
+class Button
+{
+public:
+    Button(GPIO_TypeDef * Button, uint8_t pin) : Button_Port(Button), button_pin(pin)
+    {
+        if(pin < 8)
+        {
+            Button_Port->CRL &= ~(0xF << (pin * 4));
+            Button_Port->CRL |= (INPUT_FLOATING << (pin * 4));
+        }
+        else
+        {
+            Button_Port->CRH &= ~(0xF << ((pin - 8) * 4));
+            Button_Port->CRH |= (INPUT_FLOATING << ((pin - 8) * 4));
+        }
+    }
+
+    Status get_Button_Status()
+    {
+        return static_cast<Status>((Button_Port->IDR & (1 << button_pin)) ? notPressed : pressed); // Bit masking
+    }
+private:
+    GPIO_TypeDef * Button_Port;
+    uint8_t button_pin;
+};
+
+class OutputBase
+{
+public:
+    virtual void Initialize() = 0;
+    virtual void setStatusHigh() = 0;
+    virtual void setStatusLow() = 0;
+};
+
+class LED : public OutputBase
+{
+private:
+    GPIO_TypeDef * LED_PORT;
+    uint8_t led_pin;
+
+public:
+    LED(GPIO_TypeDef * Led, uint8_t pin) : LED_PORT(Led), led_pin(pin)
+    {}
+
+    void Initialize() override
+    {
+        if (led_pin < 8)
+        {
+            LED_PORT->CRL &= ~(0xF << (led_pin * 4));
+            LED_PORT->CRL |= (OUTPUT_MAX_SPEED_50 << (led_pin * 4));
+        }
+        else
+        {
+            LED_PORT->CRH &= ~(0xF << ((led_pin - 8) * 4));
+            LED_PORT->CRH |= (OUTPUT_MAX_SPEED_50 << ((led_pin - 8) * 4));
+        }
+    }
+
+    void setStatusHigh() override
+    {
+        LED_PORT->ODR |= (1 << led_pin);
+    }
+
+    void setStatusLow() override
+    {
+        LED_PORT->ODR &= ~(1 << led_pin);
+    }
+};
+
+void delay(unsigned int delay_time)
+{
+    for(unsigned int i = 0; i < delay_time; i++);
+}
+
+int main(void)
+{
+    unsigned int delay_time = 100000;
+
+    // Enable clocks for GPIOC, GPIOB, and GPIOA
+    RCC->APB2ENR |= RCC_GPIOC_EN | RCC_GPIOB_EN | RCC_GPIOA_EN;
+
+    // Initialize button B4
+    Button button_b4(GPIOB, PUSH_BUTTON_PIN);
+
+    // Initialize LED on C13
+    LED led(GPIOC, LED_PIN_3);
+    led.Initialize();
+
+    // Initialize GPIOA pins A1, A2, A3 as outputs
+    GPIOA->CRL &= ~((0xF << (PIN_A1 * 4)) | (0xF << (PIN_A2 * 4)) | (0xF << (PIN_A3 * 4)));
+    GPIOA->CRL |= (OUTPUT_MAX_SPEED_50 << (PIN_A1 * 4)) | (OUTPUT_MAX_SPEED_50 << (PIN_A2 * 4)) | (OUTPUT_MAX_SPEED_50 << (PIN_A3 * 4));
+
+    while (1)
+    {
+        Status buttonState = button_b4.get_Button_Status();
+
+        if (buttonState == pressed)
+        {
+            led.setStatusHigh();
+            GPIOA->ODR |= (SHIFT_STEPs << RGB_PIN_1) | (SHIFT_STEPs << RGB_PIN_2) | (1 << RGB_PIN_3);
+            delay(delay_time);
+            GPIOA->ODR &= ~((SHIFT_STEPs << RGB_PIN_1) | (SHIFT_STEPs << RGB_PIN_2) | (1 << RGB_PIN_3));
+            delay(delay_time);
+        }
+        else
+        {
+            led.setStatusLow();
+            GPIOA->ODR &= ~((1 << RGB_PIN_1) | (1 << RGB_PIN_2) | (1 << RGB_PIN_3));
+            delay(delay_time);
+        }
+    }
+}

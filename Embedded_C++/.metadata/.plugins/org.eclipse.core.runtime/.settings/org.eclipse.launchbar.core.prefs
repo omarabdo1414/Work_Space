@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPIO_LED_OOP Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Bush_Button,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPIO Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_And_BB Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Bush_Button,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPIO_LED_OOP Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_And_BB Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPIO Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPIO_OOP Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Bush_Button/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Bush_Button/activeLaunchTarget=null\:---

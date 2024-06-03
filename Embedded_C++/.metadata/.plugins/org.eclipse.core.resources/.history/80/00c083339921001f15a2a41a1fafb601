@@ -1,0 +1,105 @@
+
+extern "C"
+{
+	#include "main.h"
+}
+
+constexpr uint8_t RCC_IOPA  							= 2; // PORT A
+constexpr uint8_t RCC_IOPB  							= 3; // PORT B
+constexpr uint8_t RCC_IOPC  							= 4; // PORT C
+constexpr uint8_t LED_PIN_NUMBER_PA1    			    = 1; // LED 1 of RGB
+constexpr uint8_t LED_PIN_NUMBER_PA2    			    = 2; // LED 1 of RGB
+constexpr uint8_t LED_PIN_NUMBER_PA3    			    = 3; // LED 1 of RGB
+constexpr uint8_t LED_PIN_NUMBER_C13   			    	= 13; // LED 1 of RGB
+constexpr uint8_t BUTTON_PIN_NUMBER 					= 4; // push Button number 2
+constexpr uint8_t OUTPUT_MAX_SPEED_AND_CONFIGURATION    = 0x3;// 50 MHZ
+constexpr uint8_t SHIFTED_TIMES 						= 4;
+
+/* TODO */
+
+// Classes for Peripherals
+class LED
+{
+public:
+	LED(GPIO_TypeDef * PORT, uint8_t pin) : LED_PORT(PORT), pinNumber(pin)
+	{
+//		initialization();
+		if (pinNumber < 8)
+		{
+			LED_PORT->CRL = (OUTPUT_MAX_SPEED_AND_CONFIGURATION << SHIFTED_TIMES * pinNumber);
+		}
+		else if (pinNumber > 8 && pinNumber < 16)
+		{
+			LED_PORT->CRH = (OUTPUT_MAX_SPEED_AND_CONFIGURATION << SHIFTED_TIMES * (pinNumber % 8));
+		}
+
+		/* Initialize output data register */
+		LED_PORT->ODR = 0x0000;
+	}
+
+	void LedON()
+	{
+		LED_PORT->ODR |= (1 << pinNumber);
+	}
+
+	void LedOFF()
+	{
+		LED_PORT->ODR &= ~(1 << pinNumber);
+	}
+
+//	void initialization()
+//	{
+//
+//	}
+
+private:
+	GPIO_TypeDef * LED_PORT;
+	uint8_t pinNumber;
+};
+
+void vRCC_APP2_Enable_Clock(bool enable,uint8_t PORT)
+{
+	if(enable)
+	{
+		RCC->APB2ENR |=  (1 << PORT);
+	}
+	else
+	{
+		RCC->APB2ENR &= ~(1 << PORT);
+	}
+}
+
+void delayMS(unsigned int ticks)
+{
+	for(unsigned int i = 0; i < ticks; i++);
+}
+
+int main(void)
+{
+	vRCC_APP2_Enable_Clock(1 , RCC_IOPA);
+	vRCC_APP2_Enable_Clock(1 , RCC_IOPB);
+	vRCC_APP2_Enable_Clock(1 , RCC_IOPC);
+
+	LED led1(GPIOA, LED_PIN_NUMBER_PA1);
+//	LED led2(GPIOC, LED_PIN_NUMBER_C13);
+
+
+  while (1)
+  {
+	  if(!(GPIOB->IDR & (1 << BUTTON_PIN_NUMBER)))
+	  {
+		  led1.LedON();
+//		  led2.LedON();
+		  delayMS(100000);
+	  	  led1.LedOFF();
+//		  led2.LedOFF();
+		  delayMS(100000);
+	  }
+	  else
+	  {
+		  led1.LedOFF();
+//		  led2.LedOFF();
+	  }
+  }
+}
+

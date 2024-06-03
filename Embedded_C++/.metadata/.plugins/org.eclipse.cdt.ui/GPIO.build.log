@@ -1,10 +1,23 @@
-18:07:42 **** Incremental Build of configuration Debug for project GPIO ****
+11:56:32 **** Incremental Build of configuration Debug for project GPIO ****
 make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "GPIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Maydoum\STM32CubeIDE\workspace_1.14.1\GPIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: GPIO.elf
+ 
 arm-none-eabi-size  GPIO.elf 
+arm-none-eabi-objdump -h -S GPIO.elf  > "GPIO.list"
    text	   data	    bss	    dec	    hex	filename
-    724	     12	   1572	   2308	    904	GPIO.elf
+    820	     12	   1572	   2404	    964	GPIO.elf
+arm-none-eabi-objcopy  -O ihex GPIO.elf  "GPIO.hex"
 Finished building: default.size.stdout
+Finished building: GPIO.list
+ 
+Finished building: GPIO.hex
+ 
+arm-none-eabi-objcopy  -O binary GPIO.elf  "GPIO.bin"
+ 
+Finished building: GPIO.bin
  
 
-18:07:42 Build Finished. 0 errors, 0 warnings. (took 282ms)
+11:56:34 Build Finished. 0 errors, 0 warnings. (took 1s.592ms)
 

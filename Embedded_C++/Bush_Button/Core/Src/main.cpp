@@ -6,6 +6,7 @@ extern "C"
 
 #include "mcal.h"
 #include "motor.h"
+#include "robot.h"
 
 enum Status
 {
@@ -20,11 +21,11 @@ public:
 	{
 		if(pin < 8)
 		{
-			Button_Port->CRL = (INPUT_FLOATING << pin);
+			Button_Port->CRL = (INPUT_FLOATING << button_pin);
 		}
 		else
 		{
-			Button_Port->CRH = (INPUT_FLOATING << pin);
+			Button_Port->CRH = (INPUT_FLOATING << button_pin);
 		}
 	}
 
@@ -64,11 +65,19 @@ private:
 public:
 	LED(GPIO_TypeDef * Led, uint8_t pin) : LED_PORT(Led), led_pin(pin)
 	{
-//		RCC->APB2ENR |= RCC_GPIOC_EN;
+		Initialize();
 	}
 	void Initialize()
 	{
-		GPIOC->CRH = (OUTPUT_MAX_SPEED_50 << PIN_C13);
+		if(led_pin < 8)
+		{
+			LED_PORT->CRL = (INPUT_FLOATING << led_pin);
+		}
+		else
+		{
+			LED_PORT->CRH = (INPUT_FLOATING << led_pin);
+		}
+		LED_PORT->CRH = (OUTPUT_MAX_SPEED_50 << PIN_C13);
 	}
 
 	void setStatusHigh()
@@ -91,17 +100,19 @@ void delay(unsigned int delay_time)
 
 int main(void)
 {
-	RCC->APB2ENR = RCC_GPIOC_EN | RCC_GPIOB_EN | RCC_GPIOA_EN;
-	GPIOA->CRL = (OUTPUT_MAX_SPEED_50 << PIN_A1) | (OUTPUT_MAX_SPEED_50 << PIN_A2) | (OUTPUT_MAX_SPEED_50 << PIN_A3);
-
-  unsigned int delay_time = 100000;
+	Button button(GPIOB, PUSH_BUTTON_PIN);
+	Motor motor1(motor_config);
 
   while (1)
   {
-	  GPIOA->ODR |= (SHIFT_STEPs << RGB_PIN_2);
-	  delay(delay_time);
-	  GPIOA->ODR &=~ (SHIFT_STEPs << RGB_PIN_2);
-	  delay(delay_time);
+	  if(!button.get_Button_Status())
+	  {
+		  motor1.motorMoveCW();
+	  }
+	  else
+	  {
+		  motor1.motorMoveCCW();
+	  }
   }
 
 }

@@ -1,0 +1,5 @@
+../Core/Src/robot.cpp:11:1:Robot::Robot(Motor, Motor)	24	static
+../Core/Src/robot.cpp:17:6:void Robot::Forward()	16	static
+../Core/Src/robot.cpp:23:6:void Robot::Backword()	16	static
+../Core/Src/robot.cpp:29:6:void Robot::Right()	16	static
+../Core/Src/robot.cpp:35:6:void Robot::Left()	16	static

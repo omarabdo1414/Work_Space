@@ -1,4 +1,4 @@
-../Core/Src/dio.c:18:15:Dio_ReadChannel	5
-../Core/Src/dio.c:40:6:Dio_WriteChannel	5
-../Core/Src/dio.c:61:19:Dio_ReadPort	5
-../Core/Src/dio.c:81:6:Dio_WritePort	5
+../Core/Src/dio.c:13:15:Dio_ReadChannel	5
+../Core/Src/dio.c:35:6:Dio_WriteChannel	5
+../Core/Src/dio.c:56:19:Dio_ReadPort	5
+../Core/Src/dio.c:76:6:Dio_WritePort	5

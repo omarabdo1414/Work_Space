@@ -1,5 +1,5 @@
 Core/Src/dio.o: ../Core/Src/dio.c ../Core/Inc/dio.h \
- ../Core/Inc/Std_Types.h ../Core/Inc/main.h \
+ ../Core/Inc/Std_Types.h ../Core/Inc/bit_math.h ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -24,6 +24,7 @@ Core/Src/dio.o: ../Core/Src/dio.c ../Core/Inc/dio.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 ../Core/Inc/dio.h:
 ../Core/Inc/Std_Types.h:
+../Core/Inc/bit_math.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:

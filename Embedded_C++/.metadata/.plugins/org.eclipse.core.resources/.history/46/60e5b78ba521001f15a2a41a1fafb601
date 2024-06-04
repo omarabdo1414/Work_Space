@@ -1,0 +1,23 @@
+/*
+ * robto.h
+ *
+ *  Created on: Jun 3, 2024
+ *      Author: Maydoum
+ */
+
+#ifndef INC_ROBTO_H_
+#define INC_ROBTO_H_
+
+#include "motor.h"
+
+class Robot
+{
+public:
+
+private:
+	Motor motor1;
+	Motor motor2;
+};
+
+
+#endif /* INC_ROBTO_H_ */

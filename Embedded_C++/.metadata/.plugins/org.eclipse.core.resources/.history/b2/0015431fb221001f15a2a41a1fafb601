@@ -1,0 +1,19 @@
+
+#include "main.h"
+#include "dio.h"
+#include "Std_Types.h"
+#include "bit_math.h"
+
+#define PIN_A2 2
+
+int main(void)
+{
+  RCC->APB2ENR = (1 << 2);
+  Dio_WritePort(GPIOA, PIN_A2);
+
+  while (1)
+  {
+
+  }
+
+}

@@ -8,6 +8,7 @@
 #ifndef INC_DIO_H_
 #define INC_DIO_H_
 #include "Std_Types.h"
+#include "bit_math.h"
 
 
 #define MAX_PIN_PER_PORT 16;

@@ -9,11 +9,6 @@
 #include "dio.h"
 #include "main.h"
 
-#define SET_BIT(reg, bit) reg |= (1 << bit)
-#define CLEAR_BIT(reg, bit) reg ~=& (1 << bit)
-#define TOGGLE_BIT(reg, bit) reg ^= (1 << bit)
-#define GET_BIT(reg, bit) ((reg >> bit) & 1)
-
 
 Dio_LevelType Dio_ReadChannel(Dio_ChannelType ChannelId)
 {
@@ -45,13 +40,13 @@ void Dio_WriteChannel(Dio_ChannelType ChannelId,Dio_LevelType Level)
 	switch(PortId)
 	{
 	case PortA:
-		SET_BIT(GPIOA->IDR, Id);
+		SET_BIT_(GPIOA->IDR, Id);
 		break;
 	case PortB:
-		SET_BIT(GPIOB->IDR, Id);
+		SET_BIT_(GPIOB->IDR, Id);
 		break;
 	case PortC:
-		SET_BIT(GPIOC->IDR, Id);
+		SET_BIT_(GPIOC->IDR, Id);
 		break;
 	default:
 		break;

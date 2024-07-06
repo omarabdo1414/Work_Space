@@ -1,5 +1,5 @@
 #include <iostream>
-#include "wifi.h"
+#include "wifi.hpp"
 
 void wifi()
 {

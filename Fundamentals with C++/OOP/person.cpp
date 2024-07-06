@@ -42,9 +42,9 @@ public:
 
     // Display method
     void displayPersonInfo() const {
-        std::cout << "Name: " << getName() << "\n";
-        std::cout << "Gender: " << getGender() << "\n";
-        std::cout << "Age: " << getAge() << "\n";
+        std::cout << "Name: " << name << "\n";
+        std::cout << "Gender: " << gender << "\n";
+        std::cout << "Age: " << age << "\n";
     }
 };
 

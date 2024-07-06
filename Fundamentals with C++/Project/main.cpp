@@ -1,6 +1,6 @@
 #include <iostream>
 #include "calc.h"
-#include "lib/wifi.h"
+#include "lib/wifi.hpp"
 
 int main()
 {

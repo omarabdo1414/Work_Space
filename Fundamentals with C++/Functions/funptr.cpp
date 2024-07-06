@@ -11,6 +11,7 @@ int main()
     {
         return i > 3;
     };
+    
     auto result = std::find_if(arr.begin(), arr.end(), lambda);
 
     std::cout << *result << std::endl;

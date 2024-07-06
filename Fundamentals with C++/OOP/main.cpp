@@ -1,89 +1,132 @@
 #include <iostream>
+#include <ostream>
 
 class Rectangle
 {
-    private:
-        float length;
-        float width;
-        static int count;
-    public:
-    //default Constructor
-    Rectangle() : length(0), width(0)
+    // Attributes
+private:
+    float length;
+    float width;
+    static int count;
+
+    // Methods
+public:
+    // Default Constructor
+    Rectangle() : length(0), width(0) // Initializer list For Default Constructor
     {
         count++;
-        std::cout << "default Constructor" << std::endl;
+        std::cout << "Default Costrucor Created" << std::endl;
     }
-    //Parameterized Constructor
-    Rectangle(float len, float wid) : length(len), width(wid)
+
+    // Parametrized Constructor
+    Rectangle(float len, float wid) : length(len), width(wid) // Initializer list For Parametrized Constructor
     {
-        std::cout << "Parameterized Constructor created" << std::endl;
+        count++;
+        std::cout << "Parametrized Costrucor Created" << std::endl;
     }
-    void set_length(float l)
+
+    // Copy Constructor
+    Rectangle(const Rectangle &object) // const is a best practice
     {
-        if(l >= 0)
+        count++;
+        length = object.length;
+        width  = object.width;
+        std::cout << "Copy Constructor Called" << std::endl;
+    }
+
+    friend std::ostream& operator<<(std::ostream &output,const Rectangle &rect);
+
+    void setLength(float l)
+    {
+        if (l >= 0)
         {
             length = l;
         }
         else
         {
-            std::cout << "Positive numbers only" << std::endl;
+            std::cout << "Error! The number should be Positive" << std::endl;
         }
     }
-    float get_length()
+
+    float getLength()
     {
         return length;
     }
-    void set_width(float w)
+
+    void setWidth(float w)
     {
-        if(w >= 0)
+        if (w >= 0)
         {
             width = w;
         }
         else
         {
-            std::cout << "Positive numbers only" << std::endl;
+            std::cout << "Error! The number should be Positive" << std::endl;
         }
     }
-    float get_width()
+
+    float getWidth()
     {
         return width;
     }
 
-    float get_area()
+    float getArea()
     {
         return length * width;
     }
 
-    Rectangle merge(Rectangle r1, Rectangle r2)
+    Rectangle mergeRectangle(const Rectangle r2)
     {
-        Rectangle temp;
-        temp.length = r1.length + r2.length;
-        temp.width = r1.width + r2.width;
+        Rectangle r3;
 
-        return temp;
+        r3.length = length + r2.length;
+        r3.width  = width  + r2.width;
+
+        return r3;
+    }
+
+    // Operator Overloading
+    Rectangle operator+(const Rectangle r1)
+    {
+        Rectangle r3;
+
+        r3.length = length + r1.length;
+        r3.width  = width  + r1.width;
+
+        return r3;
+    }
+
+    int getCount()
+    {
+        return count;
     }
 
     // Destructor
     ~Rectangle()
     {
-        std::cout << "Destructor called" << std::endl;
+        std::cout << "Destructor Called" << std::endl;
     }
 };
 
-Rectangle::count = 0;
+// Friend
+std::ostream& operator<<(std::ostream &output,const Rectangle &rect)
+{
+    output << rect.length << " " << rect.width;
+
+    return output;
+}
+
+int Rectangle::count = 0;
 
 int main()
 {
-    // Rectangle rect1(5, 6);
-    // Rectangle rect2(10, 5);
+    Rectangle rec1(2, 3);
 
-    // Rectangle r3;
-    // r3 = r3.merge(rect1, rect2);
+    std::cout << rec1.getCount() << std::endl;
 
-    // std::cout << r3.get_length() << " " << r3.get_width() << std::endl;
-    
-    add();
-    add();
+    Rectangle rec2(rec1);
+
+    std::cout << rec2.getCount() << std::endl;
 
     return 0;
 }

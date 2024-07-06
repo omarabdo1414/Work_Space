@@ -1,23 +1,21 @@
 #include <iostream>
 
+// abstract class
 class Shape
 {
 private:
-    int width, height;
+    std::string color;
 
 public:
-    Shape(int a = 0, int b = 0)
+    Shape() : color("Red")
     {
-        width = a;
-        height = b;
+
     }
 
-    virtual int area()
-    {
-        std::cout << "Parent class area : " << (width * height) << std::endl;
+    Shape(std::string col) : color(col)
+    {}
 
-        return (width * height);
-    }
+    virtual float area() = 0;
 };
 
 class Rectangle : public Shape
@@ -26,13 +24,13 @@ private:
     int width, height;
 
 public:
-    Rectangle(int a = 0, int b = 0) : Shape(a, b)
+    Rectangle(int a = 0, int b = 0)
     {
         width = a;
         height = b;
     }
 
-    int area() override
+    float area() override
     {
         std::cout << "Rectangle class area : " << (width * height) << std::endl;
 
@@ -46,13 +44,13 @@ private:
     int base, height;
 
 public:
-    Triangle(int a = 0, int b = 0) : Shape(a, b)
+    Triangle(int a = 0, int b = 0)
     {
         base = a;
         height = b;
     }
 
-    int area() override
+    float area() override
     {
         std::cout << "Triangle class area : " << ((base * 0.5) * height) << std::endl;
 
@@ -69,7 +67,7 @@ private:
 public:
     Circle(float radius) : m_radius(radius) {}
 
-    int area() override
+    float area() override
     {
         std::cout << "Circle class area : " << (PI * m_radius * m_radius) << std::endl;
 
@@ -79,24 +77,20 @@ public:
 
 int main()
 {
-    Shape p(10, 5);
-    Rectangle r(5, 6);
-    Triangle t(2, 3);
-    Circle C(5);
+    Shape *shape;
 
-    Shape *shape_ptr;
+    Rectangle rec(10, 5);
+    Triangle tri(6, 5);
+    Circle cir(8);
 
-    shape_ptr = &p;
-    shape_ptr->area();
+    shape = &rec;
+    shape->area();
 
-    shape_ptr = &r;
-    shape_ptr->area();
+    shape = &tri;
+    shape->area();
 
-    shape_ptr = &t;
-    shape_ptr->area();
-
-    shape_ptr = &C;
-    shape_ptr->area();
+    shape = &cir;
+    shape->area();
 
     return 0;
 }

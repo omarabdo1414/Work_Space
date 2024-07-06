@@ -7,15 +7,14 @@ struct Car
     int model;
     int maxSpeed;
 
-    void printModel()
+    std::string getCarName()
     {
-        std::cout << model << std::endl;
+        return name;
     }
-};
+}x, y;
 
-Car input()
+Car input(Car &c)
 {
-    Car c;
     std::cin >> c.name >> c.color >> c.model >> c.maxSpeed;
 
     return c;
@@ -32,16 +31,15 @@ void printCar(Car s)
 
 int main()
 {
-    Car x, y;
-
-    Car *h;
-
-    x = input();
+    input(x);
     printCar(x);
 
-    h = &x;
+    std::string carName = x.getCarName();
 
-    x.printModel();
+    std::cout << carName << std::endl;
+
+    Car *h;
+    h = &x;
 
     std::cout << h->name << " " << h->color << std::endl;
 

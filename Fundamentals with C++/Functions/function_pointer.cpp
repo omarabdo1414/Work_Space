@@ -2,26 +2,29 @@
 #include <array>
 #include <functional>
 
-void ForEach(const std::array<int, 6>& values, std::function<void(int)> func)
+void FOREACH(std::array<int, 5> arr, std::function<int(int)> funPtr)
 {
-    for(auto value : values)
-        func(value);
+    for(auto i : arr)
+    {
+        funPtr(i);
+    }
 }
 
 int main()
 {
-    std::array<int, 6> values = {1, 2, 5, 4, 9, 3};
+    std::array<int, 5> arr = {1, 5, 4, 9, 3};
 
-    int i = 5;
+    int a = 5;
 
-    auto lambda = [i](int value) mutable{
-        i = 3;
-        std::cout << "Value is : " << value * i << std::endl;
-        };
+    auto lambda = [a](int num) mutable -> int {
+        a = 3;
+        std::cout << num * a << std::endl;
+        return 5;
+    };
 
-    ForEach(values, lambda);
+    FOREACH(arr, lambda);
 
-    std::cout << i << std::endl;
+    std::cout << "Value of a: " << a << std::endl;
 
     return 0;
 }

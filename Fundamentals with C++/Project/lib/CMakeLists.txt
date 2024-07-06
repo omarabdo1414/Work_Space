@@ -4,5 +4,5 @@ message("Hello from lib")
 add_library(
     wifi_lib
     wifi.cpp
-    wifi.h
+    wifi.hpp
 )

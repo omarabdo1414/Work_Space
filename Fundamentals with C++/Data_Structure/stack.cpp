@@ -2,7 +2,7 @@
 
 const int MAX_SIZE = 100;
 
-template<class T>
+template <typename T>
 class Stack
 {
 private:
@@ -36,7 +36,7 @@ public:
     
     void pop()
     {
-        if (!is_empty())
+        if (!is_empty()) 
         {
             top--;
         }
@@ -81,12 +81,10 @@ public:
 int main()
 {
     Stack<int> arr;
+    arr.push(10);
     arr.push(20);
+    arr.push(30);
     arr.push(50);
-    arr.push(12);
-    arr.push(1);
-    arr.push(3);
-    arr.push(16);
     arr.pop();
 
     int y = 0;

@@ -29,7 +29,7 @@ Big O notaion
 O(1)
 
 Space Complexity
-a = 1
+a = 1 
 b = 1
 temp = 1
 
@@ -75,7 +75,7 @@ algorithm Add(A, B, n)
 {
     for(i = 0; i < n; i++) n + 1
     {
-        for(j = 0; j<n; j++) n * n + 1
+        for(j = 0; j < n; j++) n * (n + 1)
         {
             C[i, j] = A[i, j] + B[i,j]; n * n
         }

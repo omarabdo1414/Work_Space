@@ -1,7 +1,15 @@
 #include <iostream>
 #include <string>
 
-class Room;
+class Room {
+private:
+    int size_;
+    
+public:
+    Room(int size) : size_(size) {}
+    // Additional constructor if needed
+    // Destructor if needed
+};
 
 class House {
 private:
@@ -16,12 +24,4 @@ public:
     }
 };
 
-class Room {
-private:
-    int size_;
-    
-public:
-    Room(int size) : size_(size) {}
-    // Additional constructor if needed
-    // Destructor if needed
-};
+

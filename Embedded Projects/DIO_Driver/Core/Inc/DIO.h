@@ -1,16 +1,13 @@
 /*
- * main.cpp
+ * DIO.h
  *
  *  Created on: May 20, 2024
  *      Author: Omar AbdElAleem
  */
 
+#ifndef INC_DIO_H_
+#define INC_DIO_H_
 
-int main(void)
-{
-    
-    while (1)
-    {
-        
-    }
-}
+
+
+#endif /*INC_DIO_H_*/
